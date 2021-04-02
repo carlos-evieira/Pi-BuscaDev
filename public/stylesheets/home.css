@@ -71,9 +71,13 @@ input {
   border-radius: 5px;
   border: 1px solid #acda98;
   width: 50vw;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.search{
+  margin-top:20px;
 }
 
 button {
@@ -87,7 +91,7 @@ button {
   align-items: center;
   justify-content: center;
   margin-left: 5px;
-  margin-top: 20px;
+  /* margin-top: 20px; */
 }
 
 /* .busca {
@@ -160,10 +164,10 @@ button {
     font-size: 15px;
   }
  }
-}
+
 
 /* Small devices (tablets, 768px and up) */
-@media (min-width: @screen-sm-min) { 
+@media(min-width: @screen-sm-min) { 
   .busca h1{
     font-size:30px;
     

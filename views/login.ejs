@@ -8,20 +8,31 @@
     <%- include('./parts/header') %>
 
     <link rel="stylesheet" href="/stylesheets/login.css" />
-    <main>
-      <h1>Login</h1>
-
-      <form action="/login" method="POST">
-        <label for="email">e-mail</label>
-        <input type="email" name="email" id="email" />
-        <label for="senha">Senha</label>
-        <input type="password" name="senha" id="senha" />
-        <input type="submit" value="entrar" name="entrar" />
-
-        <a href="#">Esqueci minha senha</a>
-        <a href="/usuario/cadastrar">Ainda não sou cadastrado</a>
-      </form>
-    </main>
+      <div class="container">
+        <main>
+          <h1>Login</h1> 
+          <form  action="/login" method="POST">
+            <div class="form-row mt-5 ">
+              <div class="form-group col-md-12">
+                <label for="email">E-mail</label>
+                <input class="form-control" type="email" name="email" id="email">
+              </div>
+            </div>
+            <div class="form-row ">
+              <div class="form-group col-md-12">
+                <label for="senha">Senha</label>
+                <input class="form-control" type="password" name="senha" id="senha">
+              </div>
+            </div>
+            <div class="button form-group mt-5 ">
+              <span></span>
+              <button type="submit"  class="btn btn-dark">Enviar</button>
+            </div>
+          </form>
+        </main>
+      </div>
+  
+    
 
   </body>
 </html>
