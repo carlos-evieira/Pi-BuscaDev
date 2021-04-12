@@ -7,79 +7,92 @@
   </head>
   <body>
     <%- include('../parts/header-logado') %>
-    <main>
-      <form action="/perfil/editar?_method=PUT" method="POST" enctype="multipart/form-data">
+
+
+
+    <div class="container">
+      <main>
+       <form action="/perfil/editar?_method=PUT" method="POST" enctype="multipart/form-data">
         <h1 id="titulo"></h1>
-
-        <div>
-          <img id="foto-perfil" src="" alt="foto de perfil" />
-        </div>
-
-        <div>
-          <label for="resumo"></label>
-          <br />
-          <textarea name="resumo" id="resumo" cols="100" rows="5"></textarea>
-        </div>
-
-        <div>          
-          <label for="curriculo">Upload do Curriculum Vitae:</label>
-          <input type="file" name="curriculo" id="curriculo" />
-        </div>
-
-        <div>
-          <b>Experiência profissional:</b>
-          <div id="div-exp"></div>
-          <input type="button" id="add-exp" value="Adicionar" />
-        </div>
-
-        <br />
-
-        <div>
-          <b>Formação:</b>
-          <div id="div-formacao"></div>
-          <input type="button" id="add-formacao" value="Adicionar" />
-        </div>
-
-        <br />
-
-        <div>
-          <b>Competências: </b>
-          <ul id="ul-competencias"></ul>
-          <input type="button" value="Adicionar" id="add-competencia" />
-        </div>
-
-        <br />
-
-        <div>
-          <b>Linguagens que domina:</b>
-          <ul id="ul-linguagens"></ul>
-          <input type="button" value="Adicionar" id="add-linguagem" />
-        </div>
-        <br />
-
-        <div>
-          <b>Repositório:</b>
-          <div>
-            <input type="text" name="repositorio" id="repositorio" />
+          <div class="form-row ">
+            <div class="form-group col-md-4 ">
+              <img id="foto-perfil" src="" alt="foto de perfil" />
+            </div>
+            <div class="form-group col-md-8 ">
+              <label for="resumo"></label>
+              <textarea class="form-control" name="resumo" id="resumo"  rows="11" placeholder="Escreva aqui um Resumo de suas qualificações"></textarea>
+            </div>
           </div>
-        </div>
+          <div class="form-row ">
+            <div class="form-group col-md-12 ">
+              <hr>
+              <h3> <label  for="curriculo">Upload do Curriculum Vitae:</label> </h3>
+              <input type="file" name="curriculo" id="curriculo" />
+              <hr>
+            </div>
+          </div>
+          <div class="form-row ">
+            <div class="form-group col-md-12 ">
+              <h3>Experiência profissional:</h3>
+              <div id="div-exp"></div>
+              <input type="button" id="add-exp" value="Adicionar" />
+              <hr>
+            </div>
+          </div>
+          <div class="form-row ">
+            <div class="form-group col-md-12 ">
+              <h3>Formação:</h3>
+              <div id="div-formacao"></div>
+              <input type="button" id="add-formacao" value="Adicionar" />
+              <hr>
+            </div>
+          </div>
+          <div class="form-row ">
+            <div class="form-group col-md-12 ">
+              <h3>Competências: </h3>
+              <ul id="ul-competencias"></ul>
+              <input type="button" value="Adicionar" id="add-competencia" />
+              <hr>
+            </div>
+          </div>
+          <div class="form-row ">
+            <div class="form-group col-md-12 ">
+              <h3>Linguagens que domina:</h3>
+              <ul id="ul-linguagens"></ul>
+              <input type="button" value="Adicionar" id="add-linguagem" />
+              <hr>
+            </div>
+          </div>
+          <div class="form-row ">
+            <div class="form-group col-md-12 ">
+              <h3>Repositório:</h3>
+              <input type="text" name="repositorio" id="repositorio" />
+              <hr>
+            </div>
+          </div>
+          <div class="form-row ">
+            <div class="form-group col-md-12 ">
+              <h3>Redes sociais:</h3>
+              <ul id="ul-redes"></ul>
+              <input type="button" value="Adicionar" id="add-redes" />
+              <hr>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group mt-4 col-md-4">
+              <button type="submit" class="btn btn-dark" value="Atualizar">Atualizar</button>
+            </div>
+          </div>
+        </form>
+        
+        <a href="/perfil/editar/portifolio"> 
+          <button type=button class="btn btn-success" >Editar portifolio</button>
+        </a>
+      </main>
+      <br>
+    </div>
 
-        <br />
 
-        <div>
-          <b>Redes sociais:</b>
-          <ul id="ul-redes"></ul>
-          <input type="button" value="Adicionar" id="add-redes" />
-        </div>
-
-        <br />
-
-        <input type="submit" value="Atualizar" />
-      </form>
-      <div>
-        <a href="/perfil/editar/portifolio"> <b>Editar portifolio</b></a>
-      </div>
-    </main>
     <script src="/js/paginaEditar.js"></script>
     <%- include('../parts/footer') %>
   </body>

@@ -11,9 +11,27 @@ ul li {
 }
 
 input[type="text"] {
-  width: 400px;
+  display: flex;
+  width: 70%;
+  min-width:400px;
+  background-color: rgb(233, 233, 233);
+  border: none;
+  margin: 10px 0;
+  margin-left: 0px;
+
+
 }
 
+h3{
+  color: #292d31;
+  margin-top: -20px;
+
+}
 input[value="Remover"]{
-  margin-left: 10px;
+  margin-left: 0px;
+}
+
+li {
+  color:#292d31;
+  margin-bottom: 0px;;
 }
